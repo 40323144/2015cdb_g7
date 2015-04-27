@@ -3,7 +3,7 @@
 * [2015cdb_g7](README.md)
    * [組員](menber.md)
    * [開會紀錄](record.md)
-* [2015cdbg7midreport]
+* [2015cdbg7midreport](midreport.md)
    * [40223235](40223235.md)
    * [40223250](40223250.md)
    * [40223211](40223211.md)
