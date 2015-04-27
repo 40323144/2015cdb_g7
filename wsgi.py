@@ -594,7 +594,7 @@ class Hello(object):
     ctx.rotate(-pi/2-pi/n_g3)
     # put it back
     ctx.translate(-(400+rp_g1+rp_g2+rp_g2+rp_g3),-400)
-    #spur.Spur(ctx).Gear(400+rp_g1+rp_g2+rp_g2+rp_g3,400,rp_g3,n_g3, pa, "red")
+    spur.Spur(ctx).Gear(400+rp_g1+rp_g2+rp_g2+rp_g3,400,rp_g3,n_g3, pa, "green")
     ctx.restore()
 
     #第4齒
@@ -605,7 +605,7 @@ class Hello(object):
     ctx.rotate(-pi/2-pi/n_g4)
     # put it back
     ctx.translate(-(400+rp_g1+2*rp_g2+2*rp_g3+rp_g4),-400)
-    #spur.Spur(ctx).Gear(400+rp_g1+2*rp_g2+2*rp_g3+rp_g4,400,rp_g4,n_g4, pa, "green")
+    spur.Spur(ctx).Gear(400+rp_g1+2*rp_g2+2*rp_g3+rp_g4,400,rp_g4,n_g4, pa, "orange")
     ctx.restore()
 
     #第5齒
@@ -616,7 +616,7 @@ class Hello(object):
     ctx.rotate(-pi/2-pi/n_g5)
     # put it back
     ctx.translate(-(400+rp_g1+2*rp_g2+2*rp_g3+2*rp_g4+rp_g5),-400)
-    #spur.Spur(ctx).Gear(400+rp_g1+2*rp_g2+2*rp_g3+2*rp_g4+rp_g5,400,rp_g5,n_g5, pa, "red")
+    spur.Spur(ctx).Gear(400+rp_g1+2*rp_g2+2*rp_g3+2*rp_g4+rp_g5,400,rp_g5,n_g5, pa, "red")
     ctx.restore()
 
     #第6齒
@@ -627,17 +627,18 @@ class Hello(object):
     ctx.rotate(-pi/2-pi/n_g6)
     # put it back
     ctx.translate(-(400+rp_g1+2*rp_g2+2*rp_g3+2*rp_g4+2*rp_g5+rp_g6),-400)
-    #spur.Spur(ctx).Gear(400+rp_g1+2*rp_g2+2*rp_g3+2*rp_g4+2*rp_g5+rp_g6,400,rp_g6,n_g6, pa, "black")
+    spur.Spur(ctx).Gear(400+rp_g1+2*rp_g2+2*rp_g3+2*rp_g4+2*rp_g5+rp_g6,400,rp_g6,n_g6, pa, "yellow")
     ctx.restore()
 
 
+
     </script>
-    <canvas id="plotarea" width="1200" height="1200"></canvas>
+    <canvas id="plotarea" width="3600" height="1200"></canvas>
     </body>
     </html>
     '''
 
-    return outstring
+        return outstring
     #@+node:2015.20150331094055.1737: *3* my3Dgeartest
     @cherrypy.expose
     # N 為齒數, M 為模數, P 為壓力角
@@ -837,6 +838,8 @@ application_conf = {'/static':{
     
 root = Hello()
 root.gear = gear.Gear()
+cherrypy.server.socket_port = 8081
+cherrypy.server.socket_host = '127.0.0.1'
 
 if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
     # 表示在 OpenSfhit 執行
