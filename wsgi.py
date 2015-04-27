@@ -563,7 +563,16 @@ class Hello(object):
     spur.Spur(ctx).Gear(400,400,rp_g1,n_g1, pa, "blue")
     ctx.restore()
 
-
+    # 將第2齒輪逆時鐘轉 90 度之後, 再多轉一齒, 以便與第1齒輪進行囓合
+    ctx.save()
+    # translate to the origin of second gear
+    ctx.translate(400+rp_g1+rp_g2,400)
+    # rotate to engage
+    ctx.rotate(-pi/2-pi/n_g2)
+    # put it back
+    ctx.translate(-(400+rp_g1+rp_g2),-400)
+    spur.Spur(ctx).Gear(400+rp_g1+rp_g2,400,rp_g2,n_g2, pa, "black")
+    ctx.restore()
 
     </script>
     <canvas id="plotarea" width="1200" height="1200"></canvas>
