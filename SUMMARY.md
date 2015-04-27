@@ -3,7 +3,6 @@
 * [Introduction](README.md)
    * [任務執行](_任務執行.md)
    * [Q&A](q&a.md)
-* [新產品開發流程](_新產品開發流程.md)
 * [協同上機考試](_協同上機考試.md)
    * [product_owner](product_owner.md)
    * [scrumaster](scrumaster.md)
