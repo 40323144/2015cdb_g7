@@ -1,7 +1,7 @@
 # Summary
 
 * [2015cdb_g7](README.md)
-   * [組員](menber.md)
+   * [menber](menber.md)
    * [開會紀錄](開會紀錄.md)
 * [協同2015cdbg7期中報告](協同2015cdbg7期中報告.md)
    * [40223235](40223235.md)
