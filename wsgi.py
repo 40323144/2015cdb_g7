@@ -583,7 +583,7 @@ class Hello(object):
     # translate to the origin of second gear
     ctx.translate(400+rp_g1+rp_g2+rp_g2+rp_g3,400)
     # rotate to engage
-    ctx.rotate(-pi/2-pi/n_g3)
+    ctx.rotate(-pi/2)
     # put it back
     ctx.translate(-(400+rp_g1+rp_g2+rp_g2+rp_g3),-400)
     spur.Spur(ctx).Gear(400+rp_g1+rp_g2+rp_g2+rp_g3,400,rp_g3,n_g3, pa, "green")
@@ -797,6 +797,8 @@ application_conf = {'/static':{
     
 root = Hello()
 root.gear = gear.Gear()
+cherrypy.server.socket_port = 8081
+cherrypy.server.socket_host = '127.0.0.1'
 
 if 'OPENSHIFT_REPO_DIR' in os.environ.keys():
     # 表示在 OpenSfhit 執行
