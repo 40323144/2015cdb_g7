@@ -1,6 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
+* [2015cdb_g7](README.md)
    * [組員](組員.md)
    * [分工表](分工表.md)
 * [協同2015cdbg7期中報告](協同2015cdbg7期中報告.md)
